@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Development & Executive Coaching | Simmons Leadership Development</title>
+    <meta name="description" content="Develop stronger leaders, build aligned teams, and improve organizational performance with Simmons Leadership Development. Explore tailored leadership training and coaching.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#042a22', // Deep Forest Green from prompt
+                            light: '#0a4237',
+                            dark: '#021a15',
+                            soft: '#e8efe8',
+                            bg: '#f8faf8',
+                            accent: '#2c6e5a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+            background-color: #ffffff;
+        }
+        
+        .brand-gradient {
+            background: linear-gradient(135deg, #042a22 0%, #0a4237 100%);
+        }
+        
+        .soft-gradient {
+            background: linear-gradient(180deg, #f8faf8 0%, #ffffff 100%);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased selection:bg-brand selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT / CREATIVE TUGS BANNER -->
+    <div class="bg-brand text-white py-2.5 px-4 text-xs sm:text-sm font-medium border-b border-brand-light">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-emerald-500/20 text-emerald-300 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded tracking-wider">Concept</span>
+                <span>Homepage concept by <a href="https://www.creativetugs.com/portfolio/" target="_blank" class="underline hover:text-emerald-300 font-bold transition-colors">Creative Tugs</a></span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://calendly.com/creativetugs/30min" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-md transition-colors font-semibold flex items-center space-x-1">
+                    <span>Discuss this website</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                </a>
+                <a href="#seo-panel" onclick="toggleSeoDrawer()" class="hover:underline text-emerald-200 flex items-center">
+                    <i class="fa-solid fa-code mr-1"></i> SEO Specs
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-200" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- LOGO & BRAND NAME WITH ACCURATE HEXAGON S ICON -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
+                        <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <!-- Hexagon Shape with S cutout in #042a22 -->
+                            <path d="M50 0 L93.3 25 L93.3 75 L50 100 L6.7 75 L6.7 25 Z" fill="#042a22"/>
+                            <path d="M68 22 C55 22 45 28 41 38 C37 48 42 60 58 64 C70 67 71 74 67 80 C62 88 42 85 32 78 C32 78 30 88 40 92 C55 98 78 92 84 76 C90 60 76 52 62 49 C50 46 48 38 53 32 C58 26 75 29 82 34 L88 24 C80 22 72 22 68 22 Z" fill="#ffffff" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg sm:text-xl tracking-tight text-brand leading-tight">SIMMONS</span>
+                        <span class="text-[10px] tracking-widest font-semibold text-gray-500 uppercase">Leadership Development</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV LINKS -->
+                <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-gray-700">
+                    <a href="#home" class="text-brand font-semibold hover:text-brand transition-colors">Home</a>
+                    <a href="#challenge" class="hover:text-brand transition-colors">Leadership Development</a>
+                    <a href="#framework" class="hover:text-brand transition-colors">Our Approach</a>
+                    <a href="#about" class="hover:text-brand transition-colors">About Brian</a>
+                    <a href="#testimonials" class="hover:text-brand transition-colors">Testimonials</a>
+                    <a href="#faqs" class="hover:text-brand transition-colors">FAQs</a>
+                </nav>
+
+                <!-- HEADER CTA -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <button onclick="openBookingModal()" class="bg-brand text-white hover:bg-brand-light px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98]">
+                        Book a Discovery Call
+                    </button>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-brand hover:bg-gray-100 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE NAVIGATION MENU -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand">Home</a>
+            <a href="#challenge" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-gray-700 hover:text-brand">Leadership Development</a>
+            <a href="#framework" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-gray-700 hover:text-brand">Our Approach</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-gray-700 hover:text-brand">About Brian</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-gray-700 hover:text-brand">Testimonials</a>
+            <a href="#faqs" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-gray-700 hover:text-brand">FAQs</a>
+            <div class="pt-2">
+                <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full bg-brand text-white py-3 rounded-lg font-semibold text-center block">
+                    Book a Discovery Call
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+
+        <!-- 01 HERO SECTION -->
+        <section class="relative bg-gradient-to-b from-brand-bg via-white to-white py-16 md:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- HERO TEXT CONTENT -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-brand/10 text-brand px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">
+                            <i class="fa-solid fa-compass"></i>
+                            <span>Leadership Development That Drives Results</span>
+                        </div>
+
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                            You Have a Vision. <br class="hidden sm:inline">
+                            <span class="text-brand">Are Your Leaders Helping You Achieve It?</span>
+                        </h1>
+
+                        <p class="text-lg md:text-xl text-gray-700 font-medium leading-relaxed max-w-2xl">
+                            Develop leaders who think clearly, build trust, and make better decisions—so your people and your organization can thrive.
+                        </p>
+
+                        <p class="text-base text-gray-600 leading-relaxed max-w-2xl">
+                            Simmons Leadership Development partners with organizations to strengthen leadership capabilities, align teams around shared values, and turn your vision into consistent, measurable progress.
+                        </p>
+
+                        <!-- CTA BUTTON GROUP -->
+                        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                            <button onclick="openBookingModal()" class="bg-brand text-white hover:bg-brand-light px-7 py-3.5 rounded-lg font-bold text-base text-center transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center group">
+                                <span>Book a Discovery Call</span>
+                                <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            <a href="#framework" class="bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-300 px-6 py-3.5 rounded-lg font-semibold text-base text-center transition-all duration-200 flex items-center justify-center">
+                                Explore Our Approach
+                            </a>
+                        </div>
+
+                        <!-- SUPPORTING TRUST BAR -->
+                        <div class="pt-6 border-t border-gray-200/80 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-gray-600">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-circle-check text-brand mr-2"></i>
+                                <span>Practical Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-circle-check text-brand mr-2"></i>
+                                <span>Stronger Teams</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-circle-check text-brand mr-2"></i>
+                                <span>Better Business Outcomes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HERO PHOTO / VISUAL -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <!-- Decorative Backdrop Badge -->
+                            <div class="absolute -top-4 -left-4 w-72 h-72 bg-brand/10 rounded-3xl transform -rotate-3 -z-10"></div>
+                            <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-emerald-100 rounded-3xl transform rotate-3 -z-10"></div>
+                            
+                            <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                                <img src="https://images.squarespace-cdn.com/content/v1/68ee5393415ec81d68a8b787/1712281145115-3A2G3D8F5G8H/Brian.jpg" 
+                                     alt="Brian Simmons - Leadership Coach and Facilitator" 
+                                     class="w-full h-80 sm:h-96 object-cover object-top rounded-xl"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x800/042a22/ffffff?text=Brian+Simmons';" />
+                                
+                                <div class="p-4 bg-white">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h2 class="font-bold text-gray-900 text-lg">Brian Simmons</h2>
+                                            <p class="text-xs text-gray-500">Leadership Partner & Facilitator</p>
+                                        </div>
+                                        <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-soft text-brand">
+                                            Executive Coach
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 LEADERSHIP CHALLENGE / VALUE PROPOSITION -->
+        <section id="challenge" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand">The Leadership Reality</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+                        Your Vision Deserves Leaders Who Can Bring It to Life.
+                    </h2>
+                    <div class="w-16 h-1 bg-brand mx-auto rounded-full"></div>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p class="text-lg">
+                            You have invested time, energy, and resources into building your organization. But achieving your vision depends on more than having the right strategy. <strong class="text-gray-900">It depends on how your leaders think, communicate, make decisions, and work together.</strong>
+                        </p>
+                        <p>
+                            Simmons Leadership Development helps you develop leaders who create the conditions for people to do meaningful work and deliver better results.
+                        </p>
+
+                        <div class="pt-4">
+                            <button onclick="openBookingModal()" class="inline-flex items-center text-brand font-bold text-base hover:text-brand-light group">
+                                <span>Let's Talk About Your Leadership Goals</span>
+                                <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- COMPARISON CARDS -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Intentional Leadership -->
+                        <div class="p-6 rounded-2xl bg-brand-bg border border-brand/20 shadow-sm space-y-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand text-white flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-bold text-brand text-lg">Intentional Leadership</h3>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2 text-xs"></i> People clearly understand what matters</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2 text-xs"></i> High ownership & accountability</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2 text-xs"></i> Strong alignment with shared purpose</li>
+                            </ul>
+                        </div>
+
+                        <!-- Unaligned Leadership -->
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-200 space-y-3">
+                            <div class="w-10 h-10 rounded-lg bg-gray-300 text-gray-700 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Unaligned Leadership</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2 text-xs"></i> Misalignment across departments</li>
+                                <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2 text-xs"></i> Slow, hesitant decision-making</li>
+                                <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2 text-xs"></i> Inconsistent operational execution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 THREE KEY BENEFITS -->
+        <section class="py-20 bg-brand-bg/60 border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand">Organizational Impact</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+                        Develop What Your Organization Needs Most
+                    </h2>
+                    <p class="text-gray-600">Focused capabilities designed to solve core organizational operational bottlenecks.</p>
+                </div>
+
+                <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- BENEFIT 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-soft text-brand flex items-center justify-center text-xl font-bold">
+                                01
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Build Leadership Bench Strength</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Prepare your people to lead with confidence, take greater ownership, and support the organization's long-term success.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                When employees feel invested in and equipped to lead, they have more opportunities to grow, contribute, and help others succeed.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-brand flex items-center">
+                            <i class="fa-solid fa-arrow-trend-up mr-2"></i> Scalable Succession & Ownership
+                        </div>
+                    </div>
+
+                    <!-- BENEFIT 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-soft text-brand flex items-center justify-center text-xl font-bold">
+                                02
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Make Work More Meaningful</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Connect your vision, mission, and values to the everyday experience of work.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Help leaders create environments where people understand the value they deliver, take pride in their contributions, and find greater purpose in achieving shared goals.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-brand flex items-center">
+                            <i class="fa-solid fa-heart mr-2"></i> Engagement & Retention
+                        </div>
+                    </div>
+
+                    <!-- BENEFIT 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-soft text-brand flex items-center justify-center text-xl font-bold">
+                                03
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Improve Operational Speed & Quality</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Help individuals and teams make aligned decisions with greater clarity and confidence.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                By reducing unnecessary coordination and improving communication, leaders can help their organizations respond more effectively and move work forward.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-brand flex items-center">
+                            <i class="fa-solid fa-bolt mr-2"></i> Agility & Executive Velocity
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <button onclick="openBookingModal()" class="bg-brand text-white hover:bg-brand-light px-8 py-3.5 rounded-lg font-bold text-sm transition-all shadow-sm">
+                        Discover How Leadership Development Can Help
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 FOUNDATIONAL FRAMEWORK -->
+        <section id="framework" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand">A Practical Framework for Leadership Development</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+                        Prepare the Soil → Nurture What's Planted → Manage the Harvest
+                    </h2>
+                    <p class="text-gray-600 text-base">
+                        Sustainable leadership growth begins with the right environment. Our approach helps leaders create healthy team cultures, develop individual potential, and translate their efforts into meaningful results.
+                    </p>
+                </div>
+
+                <!-- FRAMEWORK STEPS GRID -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    
+                    <!-- STEP 1 -->
+                    <div class="relative bg-white p-8 rounded-2xl border-2 border-brand/20 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="px-3 py-1 bg-brand text-white text-xs font-bold rounded-full">Phase 01</span>
+                                <i class="fa-solid fa-seedling text-3xl text-brand"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Prepare the Soil</h3>
+                            <p class="text-sm font-semibold text-brand mb-4">Create the conditions for people to thrive.</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Every team has a culture, whether it is deliberately shaped or not. Leaders influence that culture through everyday interactions, expectations, communication, and collaboration.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                We help leaders build an environment aligned with your organization's vision and values, where people can do their best work.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="relative bg-white p-8 rounded-2xl border-2 border-brand/20 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="px-3 py-1 bg-brand text-white text-xs font-bold rounded-full">Phase 02</span>
+                                <i class="fa-solid fa-spa text-3xl text-brand"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Nurture What's Planted</h3>
+                            <p class="text-sm font-semibold text-brand mb-4">Develop people through intentional leadership.</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Strong leadership requires more than setting expectations. It means coaching people, strengthening relationships, encouraging growth, and helping individuals connect their work to a shared purpose.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                We help leaders build the habits and capabilities that allow people and teams to grow.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="relative bg-white p-8 rounded-2xl border-2 border-brand/20 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="px-3 py-1 bg-brand text-white text-xs font-bold rounded-full">Phase 03</span>
+                                <i class="fa-solid fa-wheat-awn text-3xl text-brand"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Manage the Harvest</h3>
+                            <p class="text-sm font-semibold text-brand mb-4">Turn leadership growth into meaningful results.</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Leadership development should translate into better decisions, stronger relationships, and more consistent execution.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                We help leaders connect their daily actions to organizational priorities, reinforcing the behaviors that support lasting progress.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-12 text-center">
+                    <button onclick="openBookingModal()" class="bg-brand text-white hover:bg-brand-light px-8 py-3.5 rounded-lg font-bold text-sm transition-all">
+                        Explore Our Leadership Development Approach
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 HOW IT WORKS -->
+        <section class="py-20 bg-brand text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-300">How We Work Together</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                        Leadership Development Built Around Your Organization
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Your organization brings its vision, mission, values, and industry expertise. Brian brings proven leadership development practices and a practical, collaborative approach to help leaders think clearly, strengthen relationships, and produce better results.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- STEP 1 -->
+                    <div class="bg-white/5 backdrop-blur border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                        <div class="space-y-4">
+                            <div class="text-emerald-400 font-extrabold text-lg uppercase tracking-wider">Step 1</div>
+                            <h3 class="text-2xl font-bold text-white">Discovery Call</h3>
+                            <p class="text-emerald-200 text-sm font-medium">Start with a conversation.</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                We discuss your organization's goals, current leadership challenges, and opportunities for growth.
+                            </p>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Together, we determine whether our approach fits your needs and whether there is a meaningful opportunity to work together.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <button onclick="openBookingModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-brand font-bold py-2.5 px-4 rounded-lg text-sm transition-colors text-center block">
+                                Book a Discovery Call
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="bg-white/5 backdrop-blur border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                        <div class="space-y-4">
+                            <div class="text-emerald-400 font-extrabold text-lg uppercase tracking-wider">Step 2</div>
+                            <h3 class="text-2xl font-bold text-white">Trial Session</h3>
+                            <p class="text-emerald-200 text-sm font-medium">Experience the value firsthand.</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                I come to your organization to deliver an initial leadership development session at a significantly reduced rate.
+                            </p>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                This gives your team an opportunity to experience the approach, explore its practical value, and determine fit before making a long-term commitment.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-2 text-xs text-gray-400 border-t border-white/10">
+                            Low-risk trial session to evaluate team engagement.
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="bg-white/5 backdrop-blur border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                        <div class="space-y-4">
+                            <div class="text-emerald-400 font-extrabold text-lg uppercase tracking-wider">Step 3</div>
+                            <h3 class="text-2xl font-bold text-white">Immersive Leadership Development</h3>
+                            <p class="text-emerald-200 text-sm font-medium">Build capability through ongoing practice.</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                We offer 1-year or 2-year engagements featuring quarterly, full-day, in-person leadership sessions for selected leaders, combined with 1-to-1 coaching between group sessions.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <button onclick="openBookingModal()" class="w-full bg-white text-brand hover:bg-gray-100 font-bold py-2.5 px-4 rounded-lg text-sm transition-colors text-center block">
+                                Discuss a Partnership
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ABOUT BRIAN -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- LEFT COLUMN: IMAGE -->
+                    <div class="lg:col-span-5">
+                        <div class="relative">
+                            <div class="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                                <img src="https://images.squarespace-cdn.com/content/v1/68ee5393415ec81d68a8b787/1712281145115-3A2G3D8F5G8H/Brian.jpg" 
+                                     alt="Brian Simmons Leadership Facilitator" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x750/042a22/ffffff?text=Brian+Simmons';" />
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 bg-brand text-white p-6 rounded-2xl shadow-lg hidden sm:block max-w-xs">
+                                <p class="text-xs font-semibold text-emerald-300 uppercase tracking-wider">Core Philosophy</p>
+                                <p class="text-sm italic mt-1">"When leaders are intentional about how they influence others, they create better outcomes for their organizations."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: BIO CONTENT -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand">Meet Your Leadership Partner</span>
+                            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-1">Brian Simmons</h2>
+                            <p class="text-brand font-semibold text-base">Leadership Development Partner | Coach | Facilitator</p>
+                        </div>
+
+                        <p class="text-lg text-gray-800 font-medium leading-relaxed">
+                            Great leadership is not simply about knowing what to do. It is about consistently putting the right principles into practice.
+                        </p>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            Brian Simmons works with first-time team leaders, department directors, and C-suite executives to strengthen leadership capabilities, build trust, and help teams work more effectively together.
+                        </p>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            Through group training and one-to-one coaching, Brian creates tailored learning experiences that help leaders address real challenges, develop practical skills, and align their actions with organizational goals.
+                        </p>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            His approach combines leadership development, interpersonal skills, culture building, and operational excellence to help people grow while supporting the success of the organization.
+                        </p>
+
+                        <div class="pt-4 flex flex-wrap items-center gap-4">
+                            <button onclick="openBookingModal()" class="bg-brand text-white hover:bg-brand-light px-6 py-3 rounded-lg font-bold text-sm transition-all shadow-sm">
+                                Learn More About Brian
+                            </button>
+                            <a href="#testimonials" class="text-gray-700 font-semibold text-sm hover:text-brand flex items-center">
+                                Read Client Endorsements <i class="fa-solid fa-chevron-right ml-1.5 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 CLIENT LOGOS / EXPERIENCE -->
+        <section class="py-16 bg-gray-50 border-y border-gray-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Proven Experience & Reach</span>
+                    <h3 class="text-xl font-bold text-gray-800">Trusted by Organizations Across Industries</h3>
+                </div>
+
+                <!-- LOGO GRID -->
+                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-80 grayscale hover:grayscale-0 transition-all">
+                    <!-- Client Logo Placeholder 1 -->
+                    <div class="p-4 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-building-columns text-3xl text-brand"></i>
+                        <span class="font-bold text-gray-700 tracking-tight text-lg">APEX GLOBAL</span>
+                    </div>
+                    <!-- Client Logo Placeholder 2 -->
+                    <div class="p-4 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-chart-pie text-3xl text-brand"></i>
+                        <span class="font-bold text-gray-700 tracking-tight text-lg">VANGUARD HEALTH</span>
+                    </div>
+                    <!-- Client Logo Placeholder 3 -->
+                    <div class="p-4 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-network-wired text-3xl text-brand"></i>
+                        <span class="font-bold text-gray-700 tracking-tight text-lg">NEXUS TECH</span>
+                    </div>
+                    <!-- Client Logo Placeholder 4 -->
+                    <div class="p-4 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-industry text-3xl text-brand"></i>
+                        <span class="font-bold text-gray-700 tracking-tight text-lg">SUMMIT MFG</span>
+                    </div>
+                </div>
+
+                <p class="text-center text-xs text-gray-500 mt-8 max-w-2xl mx-auto">
+                    From developing emerging leaders to strengthening leadership practices across executive teams, the focus remains the same: help people grow and translate principles into action.
+                </p>
+            </div>
+        </section>
+
+        <!-- 08 TESTIMONIALS -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand">Real Client Endorsements</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+                        Endorsements of Proven Performance
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Leadership development is most meaningful when people can put what they learn into practice. Hear from those who have experienced Brian's coaching and facilitation.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- TESTIMONIAL 1 -->
+                    <div class="bg-brand-bg p-8 rounded-2xl border border-brand/10 shadow-sm flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex text-amber-500 space-x-1 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-gray-800 italic leading-relaxed text-base">
+                                "Brian's professionalism, clear communication, and practical guidance transformed how our management team communicates. He helped us identify key growth opportunities and gave us tools we use every day."
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-brand/10 flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-brand text-white font-bold flex items-center justify-center text-sm">
+                                VP
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Senior Operations Leader</h4>
+                                <p class="text-xs text-gray-500">Enterprise Logistics Firm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TESTIMONIAL 2 -->
+                    <div class="bg-brand-bg p-8 rounded-2xl border border-brand/10 shadow-sm flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex text-amber-500 space-x-1 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-gray-800 italic leading-relaxed text-base">
+                                "Brian has an uncanny ability to teach, inspire, and create a supportive learning environment. His quarterly sessions kept our directors engaged and focused on shared outcomes."
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-brand/10 flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-brand text-white font-bold flex items-center justify-center text-sm">
+                                CEO
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Chief Executive Officer</h4>
+                                <p class="text-xs text-gray-500">Regional Healthcare Network</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-12 text-center">
+                    <button onclick="openBookingModal()" class="bg-brand text-white hover:bg-brand-light px-8 py-3.5 rounded-lg font-bold text-sm transition-all shadow-sm">
+                        Let's Discuss Your Leadership Goals
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09 FAQS (ACCORDION) -->
+        <section id="faqs" class="py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand">Frequently Asked Questions</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Direct Answers to Common Questions</h2>
+                    <p class="text-gray-600 text-sm">Everything you need to know about our approach and engagements.</p>
+                </div>
+
+                <div class="space-y-4" id="faq-container">
+                    
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>What is leadership development?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Leadership development is the process of strengthening the skills, behaviors, and capabilities people need to lead effectively. It can include coaching, facilitated training, relationship building, decision-making, and developing a healthy team culture.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>Who does Simmons Leadership Development work with?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Brian works with first-time team leaders, department directors, C-suite executives, and organizations seeking to strengthen leadership capabilities and improve how their teams work together.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>What leadership challenges can you help address?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Depending on your organization's needs, leadership development can focus on team alignment, communication, interpersonal skills, culture building, decision-making, collaboration, and operational effectiveness.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>How does the leadership development process work?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            The process begins with a discovery call to understand your goals and challenges. An initial trial session gives your organization an opportunity to experience the approach. If it is a good fit, you can explore a longer-term engagement.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>What is included in a leadership development engagement?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            The current model includes quarterly, full-day in-person leadership development sessions and one-to-one coaching for key leaders between group sessions. The scope is discussed and agreed upon based on your organization's needs.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>How long does a leadership development engagement last?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Brian works with organizations to determine whether a one-year or two-year engagement is the best fit for their leadership development goals.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-gray-900 text-base sm:text-lg flex justify-between items-center focus:outline-none">
+                            <span>How do we get started?</span>
+                            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Book a discovery call to discuss your organization's vision, leadership challenges, and desired outcomes. The conversation will help determine whether Simmons Leadership Development is the right partner for you.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 10 FINAL CTA SECTION -->
+        <section class="py-24 brand-gradient text-white relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-300">Take the Next Step</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    Your Vision Starts With the Leaders Who Bring It to Life.
+                </h2>
+                <p class="text-lg sm:text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+                    You don't have to figure out every leadership challenge on your own.
+                </p>
+                <p class="text-base text-gray-200 max-w-2xl mx-auto">
+                    Let's explore how intentional leadership development can help your people build trust, make better decisions, and move your organization forward.
+                </p>
+
+                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="openBookingModal()" class="w-full sm:w-auto bg-emerald-400 hover:bg-emerald-300 text-brand font-extrabold px-8 py-4 rounded-lg text-base transition-all shadow-lg hover:shadow-emerald-900/40">
+                        Book a Discovery Call
+                    </button>
+                    <button onclick="openContactModal()" class="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border border-white/30 font-semibold px-8 py-4 rounded-lg text-base transition-all">
+                        Contact Brian
+                    </button>
+                </div>
+
+                <p class="text-xs text-emerald-200/80 pt-4">
+                    Start with a conversation about where you are, where you want to go, and what it would take to get there.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 12 FOOTER -->
+    <footer class="bg-brand-dark text-gray-300 py-16 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-white/10">
+                
+                <!-- BRAND SUMMARY -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded bg-emerald-500 flex items-center justify-center text-brand p-1.5 font-bold">
+                            <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                                <path d="M75 30 C75 15, 25 15, 25 35 C25 55, 75 45, 75 70 C75 90, 25 90, 25 70" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-white text-lg tracking-wider">SIMMONS</span>
+                    </div>
+                    <p class="text-sm text-gray-400 max-w-sm leading-relaxed">
+                        Simmons Leadership Development helps leaders build trust, strengthen teams, and turn organizational vision into meaningful results.
+                    </p>
+                    <div class="pt-2 text-xs text-gray-400">
+                        <span class="block">Focused on organizational leadership & executive team performance.</span>
+                    </div>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-emerald-400 transition-colors">Home</a></li>
+                        <li><a href="#challenge" class="hover:text-emerald-400 transition-colors">Leadership Development</a></li>
+                        <li><a href="#framework" class="hover:text-emerald-400 transition-colors">Our Approach</a></li>
+                        <li><a href="#about" class="hover:text-emerald-400 transition-colors">About Brian</a></li>
+                        <li><a href="#testimonials" class="hover:text-emerald-400 transition-colors">Testimonials</a></li>
+                        <li><a href="#faqs" class="hover:text-emerald-400 transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT & ACTION -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase">Ready to Develop Your Leaders?</h4>
+                    <p class="text-sm text-gray-400">Reach out today to schedule your initial consultation with Brian Simmons.</p>
+                    <button onclick="openBookingModal()" class="w-full bg-emerald-500 text-brand font-bold py-2.5 px-4 rounded-lg text-sm hover:bg-emerald-400 transition-colors text-center">
+                        Book a Discovery Call
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT BAR -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; <span id="year-span">2026</span> Simmons Leadership Development. All rights reserved.</p>
+                <div class="mt-4 sm:mt-0 space-x-4">
+                    <span>Privacy Policy</span>
+                    <span>•</span>
+                    <span>Terms of Service</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOKING DISCOVERY CALL MODAL -->
+    <div id="booking-modal" class="fixed inset-0 z-50 bg-brand-dark/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div>
+                <span class="text-xs font-bold text-brand uppercase tracking-wider">Start The Conversation</span>
+                <h3 class="text-2xl font-bold text-gray-900 mt-1">Book a Discovery Call</h3>
+                <p class="text-sm text-gray-600 mt-1">Select your focus areas to connect with Brian Simmons directly.</p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Name *</label>
+                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Work Email *</label>
+                    <input type="email" required placeholder="john@organization.com" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Organization / Company</label>
+                    <input type="text" placeholder="Acme Leadership Inc." class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Primary Challenge</label>
+                    <select class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:outline-none text-sm text-gray-700">
+                        <option>Executive Team Alignment</option>
+                        <option>Building Leadership Bench Strength</option>
+                        <option>Culture & Team Performance</option>
+                        <option>Trial Leadership Development Session</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-brand text-white font-bold py-3 rounded-lg text-sm hover:bg-brand-light transition-colors shadow">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SEO & AEO RECOMMENDATIONS DRAWER -->
+    <div id="seo-drawer" class="fixed bottom-0 right-0 z-50 max-w-md w-full bg-white border-t-2 border-l-2 border-brand shadow-2xl p-6 rounded-tl-2xl transform translate-y-full transition-transform duration-300">
+        <div class="flex justify-between items-center mb-4">
+            <h4 class="font-bold text-brand text-sm flex items-center">
+                <i class="fa-solid fa-circle-info mr-2"></i> SEO & AEO Optimization Spec
+            </h4>
+            <button onclick="toggleSeoDrawer()" class="text-gray-400 hover:text-gray-600 text-sm">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="text-xs text-gray-600 space-y-3 max-h-80 overflow-y-auto">
+            <div>
+                <strong class="text-gray-900 block">Single H1 Strategy:</strong>
+                "You Have a Vision. Are Your Leaders Helping You Achieve It?"
+            </div>
+            <div>
+                <strong class="text-gray-900 block">AEO Accordion FAQ Structure:</strong>
+                Formatted with explicit direct questions & concise self-contained answers ideal for Search & LLM scrapers.
+            </div>
+            <div>
+                <strong class="text-gray-900 block">Keywords Targeted:</strong>
+                Leadership development, executive leadership development, leadership coaching, team leadership training.
+            </div>
+            <div>
+                <strong class="text-gray-900 block">Brand Focus:</strong>
+                Organizational buyers (B2B focus) with clear path for discovery call.
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year-span').innerText = new Date().getFullYear();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Accordion functionality for FAQs
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close other open accordions
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    item.style.maxHeight = '0px';
+                });
+                document.querySelectorAll('#faq-container button i').forEach(item => {
+                    item.style.transform = 'rotate(0deg)';
+                });
+
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Booking Modal triggers
+        function openBookingModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.getElementById('booking-modal').classList.add('flex');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+            document.getElementById('booking-modal').classList.remove('flex');
+        }
+
+        function openContactModal() {
+            openBookingModal();
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your discovery call request has been sent. Brian's office will follow up shortly.");
+            closeBookingModal();
+        }
+
+        // SEO Drawer toggle
+        function toggleSeoDrawer() {
+            const drawer = document.getElementById('seo-drawer');
+            drawer.classList.toggle('translate-y-full');
+        }
+    </script>
+</body>
+</html>
